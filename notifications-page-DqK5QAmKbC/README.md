@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/mbramani/frontend-mentor-challenges/tree/main/notifications-page-DqK5QAmKbC](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://mbramani.github.io/frontend-mentor-challenges/notifications-page-DqK5QAmKbC/](https://mbramani.github.io/frontend-mentor-challenges/notifications-page-DqK5QAmKbC/)
 
 ### Built with
 
