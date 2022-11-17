@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.notification{
+  @apply flex flex-col mt-3
+}
+
+.notification_box{
+  @apply grid grid-cols-[_1fr_9fr] my-2 p-1 md:p-3 rounded-md 
+}
+
+.notification_img{
+  @apply w-12 mx-2 md:mx-auto hover:cursor-pointer
+}
+
+.notification_body{
+  @apply ml-1
+}
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Frontend Mentor | Notifications page</title>
+
+
+</head>
+
+<body class="bg-slate-50 font-plus-jakarta">
+  <div
+    class="flex flex-col w-full md:max-w-3xl p-4 bg-white md:p-10 md:mx-auto md:my-10 md:block md:border-1 md:rounded-xl md:shadow-xl">
+    <div class=" flex justify-between ">
+      <div class=" flex flex-row font-extrabold text-2xl text-center items-baseline">
+        Notifications
+        <span id="notification-no"
+          class="block w-8 h-7 ml-3  bg-primary-blue rounded-md font-medium text-lg text-white ">
+          3
+        </span>
+      </div>
+      <div id="mark-all-as-read" class="text-lg text-slate-400 hover:cursor-pointer hover:text-primary-blue">Mark all as
+        read</div>
+    </div>
+
+    <div class="notification ">
+      <div class="notification_box unread" style="background-color: hsl(210, 60%, 98%);">
+        <div class="notification_img">
+          <img src="./assets/images/avatar-mark-webber.webp" />
+        </div>
+        <div class="notification_body">
+          <div>
+            <span class="font-bold text-slate-900 hover:cursor-pointer hover:text-primary-blue"> Mark Webber </span>
+            <span class="font-medium text-slate-400">reacted to your recent post </span>
+            <span class="font-bold text-slate-600 hover:cursor-pointer hover:text-primary-blue">My first
+              tournament
+              today!</span>
+            <span
+              class=" red-dot absolute mt-2 ml-2 h-2 w-2 border-2 border-primary-red rounded-full bg-primary-red"></span>
+          </div>
+          <div class=" font-medium text-slate-300">1m ago
+          </div>
+        </div>
+      </div>
+
+      <div class="notification_box unread" style="background-color: hsl(210, 60%, 98%);">
+        <div class="notification_img ">
+          <img src="./assets/images/avatar-angela-gray.webp" />
+        </div>
+        <div class="notification_body">
+          <div><span class="font-bold text-slate-900 hover:cursor-pointer hover:text-primary-blue">Angela Gray </span>
+            <span class="font-medium text-slate-400">followed you</span>
+            <span
+              class="red-dot absolute mt-2 ml-2 h-2 w-2 border-2 border-primary-red rounded-full bg-primary-red"></span>
+          </div>
+          <div class="font-medium text-slate-300">5m ago</div>
+        </div>
+
+      </div>
+
+      <div class="notification_box unread" style="background-color: hsl(210, 60%, 98%);">
+        <div class="notification_img ">
+          <img src="./assets/images/avatar-jacob-thompson.webp" />
+        </div>
+        <div class="notification_body">
+          <div>
+            <span class="font-bold text-slate-900 hover:cursor-pointer hover:text-primary-blue">Jacob Thompson </span>
+            <span class="font-medium text-slate-400">has joined your group </span>
+            <span class="font-bold text-primary-blue hover:cursor-pointer">Chess Club</span>
+            <span
+              class="red-dot absolute mt-2 ml-2 h-2 w-2 border-2 border-primary-red rounded-full bg-primary-red"></span>
+          </div>
+          <div class="font-medium text-slate-300">1 day ago</div>
+        </div>
+
+      </div>
+
+
+      <div class="notification_box">
+        <div class="notification_img">
+          <img src="./assets/images/avatar-rizky-hasanuddin.webp" />
+        </div>
+        <div class="notification_body">
+          <div>
+            <span class="font-bold text-slate-900 hover:cursor-pointer hover:text-primary-blue">Rizky Hasanuddin</span>
+            <span class="font-medium text-slate-400">sent you a private message</span>
+          </div>
+          <div class="font-medium text-slate-300">5 days ago</div>
+
+          <div
+            class="block border rounded-md my-2 p-4 font-medium text-slate-500 hover:cursor-pointer hover:bg-light-grayish-blue-1">
+            Hello, thanks
+            for setting up the
+            Chess
+            Club. I've been a member for a
+            few
+            weeks now and
+            I'm already having lots of fun and improving my game.
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="notification_box">
+        <div class="notification_img">
+          <img src="./assets/images/avatar-kimberly-smith.webp" />
+        </div>
+        <div class="flex justify-between ">
+          <div class="notification_body">
+            <div>
+              <span class="font-bold text-slate-900 hover:cursor-pointer hover:text-primary-blue">Kimberly Smith</span>
+              <span class="font-medium text-slate-400">commented on your picture</span>
+            </div>
+            <div class="font-medium text-slate-300">1 week ago</div>
+
+          </div>
+          <div class="w-12 hover:cursor-pointer"><img src="./assets/images/image-chess.webp" /></div>
+        </div>
+      </div>
+
+      <div class="notification_box">
+        <div class="notification_img">
+          <img src="./assets/images/avatar-nathan-peterson.webp" />
+        </div>
+        <div class="notification_body">
+          <div>
+            <span class="font-bold text-slate-900 hover:cursor-pointer hover:text-primary-blue">Nathan Peterson</span>
+            <span class="font-medium text-slate-400">reacted to your recent post </span>
+            <span class="font-bold text-slate-600 hover:cursor-pointer hover:text-primary-blue">5 end-game strategies to
+              increase your win rate</span>
+          </div>
+          <div class="font-medium text-slate-300">2 weeks ago</div>
+        </div>
+      </div>
+
+
+      <div class="notification_box">
+        <div class="notification_img">
+          <img src="./assets/images/avatar-anna-kim.webp" />
+        </div>
+        <div class="notification_body">
+          <div>
+            <span class="font-bold text-slate-900 hover:cursor-pointer hover:text-primary-blue">Anna Kim</span>
+            <span class="font-medium text-slate-400">left the group</span>
+            <span class="font-bold text-primary-blue hover:cursor-pointer">Chess Club</span>
+          </div>
+          <div class="font-medium text-slate-300">2 weeks ago</div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="text-center">
+    Challenge by <a class="hover:cursor-pointer hover:text-primary-blue href="
+      https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="hover:text-primary-blue" href="https://github.com/mbramani/" target="_blank">@mbramani</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
