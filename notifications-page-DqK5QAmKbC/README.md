@@ -29,6 +29,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot/desktop.png)
+
 ![](./screenshot/mobile.png)
 
 
@@ -45,7 +46,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - JavaScript
-- [TailwindCss](https://tailwindcss.com/)
+- [Tailwindcss](https://tailwindcss.com/)
 
 
 
