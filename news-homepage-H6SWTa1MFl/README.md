@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/mbramani/frontend-mentor-challenges/edit/main/news-homepage-H6SWTa1MFl/](https://github.com/mbramani/frontend-mentor-challenges/edit/main/news-homepage-H6SWTa1MFl/)
+- Live Site URL: [https://mbramani.github.io/frontend-mentor-challenges/news-homepage-H6SWTa1MFl/](https://mbramani.github.io/frontend-mentor-challenges/news-homepage-H6SWTa1MFl/)
 
 ## My process
 
