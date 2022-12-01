@@ -3,28 +3,37 @@ import tw from 'twin.macro'
 import { Input, InputWrapper, FormWrapper, Label, Button } from '../styles/'
 
 export default function Form({}) {
-    const [isFocus, setIsFocus] = useState([
-        { id: 'card-holder-name', focus: false },
-        { id: 'card-number', focus: false },
-        { id: 'card-exp-mm', focus: false },
-        { id: 'card-exp-yy', focus: false },
-        { id: 'card-cvv', focus: false },
+    const [inputField, setInputField] = useState([
+        { id: 'card-holder-name', focus: false, value: '' },
+        { id: 'card-number', focus: false, value: '' },
+        { id: 'card-exp-mm', focus: false, value: '' },
+        { id: 'card-exp-yy', focus: false, value: '' },
+        { id: 'card-cvv', focus: false, value: '' },
     ])
 
-    const getFocus = (id) => isFocus.filter((obj) => obj.id === id)[0].focus
-    const handleFocus = (e) => {
-        setIsFocus((prev) => [
+    const getFocus = (id) => inputField.find((obj) => obj.id === id).focus
+    const getValue = (id) => inputField.find((obj) => obj.id === id).value
+
+    const handleFocus = (e) =>
+        setInputField((prev) => [
             ...prev.filter((obj) => obj.id !== e.target.id),
             { ...prev.find((obj) => obj.id === e.target.id), focus: true },
         ])
-    }
 
-    const handleBlur = (e) => {
-        setIsFocus((prev) => [
+    const handleBlur = (e) =>
+        setInputField((prev) => [
             ...prev.filter((obj) => obj.id !== e.target.id),
             { ...prev.find((obj) => obj.id === e.target.id), focus: false },
         ])
-    }
+
+    const handleChange = (e) =>
+        setInputField((prev) => [
+            ...prev.filter((obj) => obj.id !== e.target.id),
+            {
+                ...prev.find((obj) => obj.id === e.target.id),
+                value: e.target.value,
+            },
+        ])
     return (
         <>
             <FormWrapper>
@@ -35,6 +44,8 @@ export default function Form({}) {
                         onFocus={handleFocus}
                         onBlur={handleBlur}
                         placeholder="e.g. Jane Appleseed"
+                        value={getValue('card-holder-name')}
+                        onChange={handleChange}
                     />
                 </InputWrapper>
 
@@ -46,6 +57,8 @@ export default function Form({}) {
                         onBlur={handleBlur}
                         size="12"
                         placeholder="e.g. 1234 5678 9123 000"
+                        value={getValue('card-number')}
+                        onChange={handleChange}
                     />
                 </InputWrapper>
 
@@ -60,6 +73,8 @@ export default function Form({}) {
                                     onBlur={handleBlur}
                                     size="3"
                                     placeholder="MM"
+                                    value={getValue('card-exp-mm')}
+                                    onChange={handleChange}
                                 />
                             </InputWrapper>
 
@@ -73,6 +88,8 @@ export default function Form({}) {
                                     onBlur={handleBlur}
                                     size="3"
                                     placeholder="YY"
+                                    value={getValue('card-exp-yy')}
+                                    onChange={handleChange}
                                 />
                             </InputWrapper>
                         </div>
@@ -90,6 +107,8 @@ export default function Form({}) {
                                 onFocus={handleFocus}
                                 onBlur={handleBlur}
                                 placeholder="e.g. 123"
+                                value={getValue('card-cvv')}
+                                onChange={handleChange}
                             />
                         </InputWrapper>
                     </div>
