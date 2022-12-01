@@ -7,6 +7,7 @@ import Input from './Input'
 import InputWrapper from './InputWrapper'
 import Label from './Label'
 import Button from './Button'
+import Error from './Error'
 export {
     Card,
     Wrapper,
@@ -17,4 +18,5 @@ export {
     InputWrapper,
     Label,
     Button,
+    Error,
 }
