@@ -8,6 +8,7 @@ import InputWrapper from './InputWrapper'
 import Label from './Label'
 import Button from './Button'
 import Error from './Error'
+import CardDetailWrapper from './CardDetailWrapper'
 export {
     Card,
     Wrapper,
@@ -19,4 +20,5 @@ export {
     Label,
     Button,
     Error,
+    CardDetailWrapper,
 }

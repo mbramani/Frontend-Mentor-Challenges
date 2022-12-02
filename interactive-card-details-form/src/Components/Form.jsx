@@ -9,49 +9,49 @@ import {
     Error,
 } from '../styles/'
 
-export default function Form({}) {
-    const [inputFields, setInputFields] = useState([
-        {
-            id: 'card-holder-name',
-            name: 'Name',
-            focus: false,
-            value: '',
-            limit: 18,
-            error: '',
-        },
-        {
-            id: 'card-number',
-            focus: false,
-            name: 'Card Number',
-            value: '',
-            limit: 19,
-            error: '',
-        },
-        {
-            id: 'card-exp-mm',
-            name: 'Expiry month',
-            focus: false,
-            value: '',
-            limit: 2,
-            error: '',
-        },
-        {
-            id: 'card-exp-yy',
-            name: 'Expiry year',
-            focus: false,
-            value: '',
-            limit: 2,
-            error: '',
-        },
-        {
-            id: 'card-cvv',
-            name: 'Cvv',
-            focus: false,
-            value: '',
-            limit: 3,
-            error: '',
-        },
-    ])
+export default function Form({ inputFields, setInputFields }) {
+    // const [inputFields, setInputFields] = useState([
+    //     {
+    //         id: 'card-holder-name',
+    //         name: 'Name',
+    //         focus: false,
+    //         value: '',
+    //         limit: 18,
+    //         error: '',
+    //     },
+    //     {
+    //         id: 'card-number',
+    //         focus: false,
+    //         name: 'Card Number',
+    //         value: '',
+    //         limit: 19,
+    //         error: '',
+    //     },
+    //     {
+    //         id: 'card-exp-mm',
+    //         name: 'Expiry month',
+    //         focus: false,
+    //         value: '',
+    //         limit: 2,
+    //         error: '',
+    //     },
+    //     {
+    //         id: 'card-exp-yy',
+    //         name: 'Expiry year',
+    //         focus: false,
+    //         value: '',
+    //         limit: 2,
+    //         error: '',
+    //     },
+    //     {
+    //         id: 'card-cvv',
+    //         name: 'Cvv',
+    //         focus: false,
+    //         value: '',
+    //         limit: 3,
+    //         error: '',
+    //     },
+    // ])
 
     const getInputField = (id) => inputFields.find((obj) => obj.id === id)
     const getFocus = (id) => inputFields.find((obj) => obj.id === id).focus
@@ -107,7 +107,7 @@ export default function Form({}) {
     }
 
     const setError = (id, error) => {
-        error = id === 'card-number' ? 'must be 16 character' : error
+        error = id === 'card-number' ? 'Must be 16 character' : error
         setInputFields((prev) => [
             ...prev.filter((obj) => obj.id !== id),
             {
@@ -125,7 +125,7 @@ export default function Form({}) {
                   inputField.id !== 'card-holder-name'
                 ? setError(
                       inputField.id,
-                      `must be ${inputField.limit} character`
+                      `Must be ${inputField.limit} character`
                   )
                 : null
         })
