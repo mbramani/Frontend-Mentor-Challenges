@@ -3,7 +3,8 @@ import CardFront from './Components/CardFront'
 import CardBack from './Components/CardBack'
 import Form from './Components/Form'
 import { Wrapper, ImgBg, WhiteBg } from './styles/'
-import tw from 'twin.macro'
+import bgMobile from './assets/bg-main-mobile.png'
+import bgDesktop from './assets/bg-main-desktop.png'
 function App() {
     const defaultData = [
         {
@@ -51,9 +52,15 @@ function App() {
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 
     const setDefaultData = () => setInputFields(defaultData)
+    const css = {
+        'background-image': `url(${bgMobile})`,
+        '@media (min-width: 768px)': {
+            'background-image': `url(${bgDesktop})`,
+        },
+    }
     return (
         <div className="App flex h-screen w-screen flex-col md:flex-row">
-            <ImgBg>
+            <ImgBg css={css}>
                 <Wrapper>
                     <CardBack inputFields={inputFields} />
                     <CardFront inputFields={inputFields} />

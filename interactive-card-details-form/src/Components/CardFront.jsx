@@ -1,6 +1,7 @@
 import { Card, CardDetailWrapper } from '../styles/'
 import cardLogo from '../assets/card-logo.svg'
 import tw from 'twin.macro'
+import cardFrontImg from '../assets/bg-card-front.png'
 
 export default function CardFront({ inputFields }) {
     const findValueById = (id) =>
@@ -8,7 +9,10 @@ export default function CardFront({ inputFields }) {
 
     return (
         <>
-            <Card type="front">
+            <Card
+                type="front"
+                css={{ 'background-image': `url(${cardFrontImg})` }}
+            >
                 <CardDetailWrapper css={tw`top-[8%]`}>
                     <img
                         src={cardLogo}
