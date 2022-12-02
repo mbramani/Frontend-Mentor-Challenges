@@ -5,7 +5,7 @@ import Form from './Components/Form'
 import { Wrapper, ImgBg, WhiteBg } from './styles/'
 import tw from 'twin.macro'
 function App() {
-    const [inputFields, setInputFields] = useState([
+    const defaultData = [
         {
             id: 'card-holder-name',
             name: 'Name',
@@ -46,8 +46,11 @@ function App() {
             limit: 3,
             error: '',
         },
-    ])
+    ]
+    const [inputFields, setInputFields] = useState(defaultData)
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 
+    const setDefaultData = () => setInputFields(defaultData)
     return (
         <div className="App flex h-screen w-screen flex-col md:flex-row">
             <ImgBg>
@@ -61,6 +64,9 @@ function App() {
                     <Form
                         inputFields={inputFields}
                         setInputFields={setInputFields}
+                        isFormSubmitted={isFormSubmitted}
+                        setIsFormSubmitted={setIsFormSubmitted}
+                        setDefaultData={() => setDefaultData()}
                     />
                 </Wrapper>
             </WhiteBg>
