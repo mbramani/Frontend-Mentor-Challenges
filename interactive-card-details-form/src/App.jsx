@@ -52,12 +52,12 @@ function App() {
         <div className="App flex h-screen w-screen flex-col md:flex-row">
             <ImgBg>
                 <Wrapper>
-                    <CardBack />
+                    <CardBack inputFields={inputFields} />
                     <CardFront inputFields={inputFields} />
                 </Wrapper>
             </ImgBg>
-            <WhiteBg css={tw``}>
-                <Wrapper css={tw``}>
+            <WhiteBg>
+                <Wrapper>
                     <Form
                         inputFields={inputFields}
                         setInputFields={setInputFields}

@@ -3,6 +3,9 @@ import cardLogo from '../assets/card-logo.svg'
 import tw from 'twin.macro'
 
 export default function CardFront({ inputFields }) {
+    const findValueById = (id) =>
+        inputFields.find((inputField) => inputField.id === id).value
+
     return (
         <>
             <Card type="front">
@@ -14,18 +17,24 @@ export default function CardFront({ inputFields }) {
                 </CardDetailWrapper>
 
                 <CardDetailWrapper
-                    css={tw`w-[98%] top-[34%] md:top-[36%] lg:top-[38%]`}
+                    css={tw`ml-1 w-[98%] top-[34%] md:top-[36%] lg:top-[38%]`}
                 >
                     <div className="mx-auto w-[90%] text-xl md:w-[96%] md:text-2xl lg:w-[90%] lg:text-3xl">
-                        0000 0000 0000 0000
+                        {findValueById('card-number') || '0000 0000 0000 0000'}
                     </div>
                 </CardDetailWrapper>
                 <CardDetailWrapper
                     css={tw`top-[34%] md:top-[40%] lg:top-[46%] w-[88%]`}
                 >
                     <div className="flex w-full justify-between text-xs lg:text-sm">
-                        <div>Jane Appleseed</div>
-                        <div>MM/YY</div>
+                        <div>
+                            {findValueById('card-holder-name') ||
+                                'Jane Appleseed'}
+                        </div>
+                        <div>
+                            {findValueById('card-exp-mm') || 'MM'}/
+                            {findValueById('card-exp-yy') || 'YY'}
+                        </div>
                     </div>
                 </CardDetailWrapper>
             </Card>
